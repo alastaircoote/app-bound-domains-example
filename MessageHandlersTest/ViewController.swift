@@ -41,7 +41,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
   ) async -> WKNavigationActionPolicy {
     let url = navigationAction.request.url!
 
-//    let hostsToBlock = Set(["googlesyndication.com", "google.com"/*, "adtrafficquality.google"*/])
+//    let hostsToBlock = Set([
+//      "googlesyndication.com",
+//      "google.com",
+//      "adtrafficquality.google"
+//    ])
 //
 //    for host in hostsToBlock {
 //      if url.host()?.hasSuffix(host) == true {
@@ -50,7 +54,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 //      }
 //    }
 
-    print("navigation:", url)
+    print("navigation:", navigationAction.navigationType.rawValue, url)
 
     guard navigationAction.navigationType == .linkActivated else {
       return .allow
