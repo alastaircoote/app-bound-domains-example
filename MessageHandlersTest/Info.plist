@@ -23,7 +23,7 @@
 	</dict>
 	<key>WKAppBoundDomains</key>
 	<array>
-		<string>nytimes.com</string>
+		<string>test.example</string>
 	</array>
 </dict>
 </plist>
